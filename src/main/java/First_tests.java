@@ -36,7 +36,7 @@ public class First_tests {
 //
 //        }
         new WebDriverWait(driver,15).until(ExpectedConditions.presenceOfElementLocated (By.xpath("//button[text()=\"Fonts\"]"))).click();
-        driver.findElement(By.xpath("//input[@type=\"checkbox\" and @id=\"webfonts-enable-checkbox\"]")).click();
+        new WebDriverWait(driver,15).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//label[@class=\"checkbox\" and @for=\"webfonts-enable-checkbox\"]"))).click();
         if(driver.findElement(By.xpath("//input[@type=\"checkbox\" and @id=\"webfonts-enable-checkbox\"]")).isSelected()){
             System.out.println("Selected");
         }
